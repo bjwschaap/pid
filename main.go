@@ -14,13 +14,13 @@ func main() {
 	pid := NewPID(interval, 3.0, 5.0, 1.0)
 	//pid.SetOutputLimits(-200.0, 200.0)
 	i := 0.0
-	for math.Abs(setpoint - input) > 0.1 {
+	for math.Abs(setpoint - input) > 0.01 {
 		i++
 		output := pid.Compute(setpoint, input)
 		input +=  noise * output
 		x = append(x, i)
 		y = append(y, input)
-		ys = append(ys, 0.1 * output)
+		ys = append(ys, output)
 		//if i == 125 {
 		//	setpoint = 0
 		//}
