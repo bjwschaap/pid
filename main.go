@@ -12,7 +12,7 @@ func main() {
 	interval := 1
 	noise := 0.1
 	pid := NewPID(interval, 3.0, 5.0, 1.0)
-	//pid.SetOutputLimits(-200.0, 200.0)
+	//pid.SetOutputLimits(-500.0, 500.0)
 	i := 0.0
 	for math.Abs(setpoint - input) > 0.01 {
 		i++
