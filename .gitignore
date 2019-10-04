@@ -1,6 +1,6 @@
 *.cgo*.go
 *.cgo*.c
-
+.idea
 .DS_Store
 *.[568ao]
 *.ao
